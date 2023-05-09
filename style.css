@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+}
+
+.header-container{
+    height: 120px;
+    justify-content: space-around;
+    padding: 0 150px 0 150px;
+}
+
+.header-container, .header-logo, .header-nav{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo{
+    color: white;
+    cursor: default;
+}
+
+.header-nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header-nav ul li{
+    padding: 0 20px 0 20px ;
+    font-size: 23px;
+}
+
+.header-nav ul li a{
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.header-nav ul li a:hover{
+    text-decoration: none;
+    border-radius: 8px;
+    animation-name: nav-hover;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes nav-hover {
+    0%{
+        border-bottom: 1px solid white;
+    }
+    12.5%{
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+    }
+    25%{
+        border-right: 1px solid white;
+    }
+    37.5%{
+        border-right: 1px solid white;
+        border-top: 1px solid white;
+    }
+    50%{
+        border-top: 1px solid white;
+    }
+    62.5%{
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+    }
+    75%{
+        border-left: 1px solid white;
+    }
+    87.5%{
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    100%{
+        border-bottom: 1px solid white;
+    }
+}
