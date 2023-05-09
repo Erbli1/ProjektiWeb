@@ -84,3 +84,10 @@ header{
         border-bottom: 1px solid white;
     }
 }
+
+#hero-background{
+    width: 100%;
+    height: calc(100vh - 120px);
+    object-fit: cover;
+    z-index: -1;
+}
