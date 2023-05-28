@@ -5,6 +5,10 @@
     background-color: black;
 }
 
+.body{
+    z-index: 0;
+}
+
 a{
     color: black;
     text-decoration: none;
@@ -94,8 +98,8 @@ header{
 #hero-background{
     width: 100%;
     height: calc(100vh - 120px);
-    object-fit: cover;
-    z-index: -1;
+    object-fit: contain;
+    z-index: 2;
 }
 
 .galeria {
