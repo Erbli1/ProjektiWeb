@@ -5,10 +5,6 @@
     background-color: black;
 }
 
-.body{
-    z-index: 0;
-}
-
 a{
     color: black;
     text-decoration: none;
@@ -99,7 +95,7 @@ header{
     width: 100%;
     height: calc(100vh - 120px);
     object-fit: contain;
-    z-index: 2;
+    z-index: 1;
 }
 
 .galeria {
