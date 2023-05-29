@@ -5,6 +5,8 @@
     background-color: black;
 }
 
+
+
 a{
     color: black;
     text-decoration: none;
@@ -168,3 +170,22 @@ hr{
     animation-iteration-count: infinite;
 }
 
+.kontakt{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+.kontakt p{
+    font-size: 1.2rem;
+}
+.kontakt-photo{
+    padding-right: 10%;
+    display: flex;
+}
+.kontakt-photo img{
+
+    width: 350px;
+    height: auto;
+}
