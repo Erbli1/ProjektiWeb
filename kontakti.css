@@ -1,5 +1,4 @@
 .body{
-    padding: 0 150px 0 150px;
     margin-top: 2rem;
 }
 
@@ -8,12 +7,15 @@
     justify-content: space-around;
     align-items: center;
     color: white;
+    padding: 0 200px 0 200px;
+    gap: 30px;
 }
 
 .info-side{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    min-width: 400px;
 }
 
 .contact-title{
@@ -37,7 +39,7 @@
 }
 
 .contact-photo img{
-    width: 350px;
+    width: 500px;
     height: auto;
     border-radius: 15px;
 }
