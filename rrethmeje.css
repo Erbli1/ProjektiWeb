@@ -1,0 +1,148 @@
+
+.aboutSection{
+	width: 100%;
+	padding: 75px 8% 60px;
+	background-color: var(--bg-clr-one);
+}
+.aboutContents .aboutImage{
+	grid-area: aboutImage;
+}
+.aboutContents .aboutInfo{
+	grid-area: aboutInfo;
+    color: white;
+
+}
+.aboutContents .aboutSkills{
+	grid-area: aboutSkills;
+}
+.aboutSection .aboutContents{
+	display: grid;
+	grid-template-columns: 2fr 5fr;
+	grid-gap: 70px;
+	grid-template-areas: 'aboutImage aboutInfo'
+	                     'aboutSkills aboutSkills';
+}
+.aboutContents .aboutImage{
+	position: relative;
+	min-width: 300px;
+	height: 380px;
+}
+.aboutContents .aboutImage img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+.aboutContents .aboutImage::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	outline: 3px solid var(--primary-clr);
+	top: 15px;
+	left: 15px;
+	z-index: 1;
+}
+.aboutContents .aboutInfo h1{
+	position: relative;
+	display: inline-block;
+	font-size: 30px;
+	color: var(--primary-heading-clr);
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.aboutContents .aboutInfo h1::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 110%;
+	left: 0;
+	background-color: var(--secondary-heading-clr);
+}
+.aboutContents .aboutInfo h1::after{
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 3px;
+	top: calc(110% - 1px);
+	left: 0;
+	background-color: var(--primary-clr);
+}
+.aboutContents .aboutInfo h2{
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--primary-clr);
+	padding: 14px 0px 15px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+.aboutContents .aboutInfo p{
+	color: var(--text-clr);
+	font-size: var(--text-fontSize);
+	line-height: 1.2;
+	text-align: justify;
+	padding-bottom: 8px;
+}
+.aboutInfo .aboutPersonalInfo{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px 20px;
+	margin-top: 14px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #333;
+}
+.aboutInfo .aboutPersonalInfo div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.aboutPersonalInfo div span{
+	color: var(--text-clr);
+	letter-spacing: 1px;
+}
+
+.aboutContents .aboutSkills{
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px 80px;
+    color: #fff;
+}
+.aboutSkills .skill .subject{
+	font-size: var(--text-fontSize);
+	font-weight: thin;
+	color: var(--secondary-heading-clr);
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.aboutSkills .skill .progress_bar{
+    color: red;
+	width: 100%;
+	height: 16px;
+	background-color: var(--bg-clr-one);
+	padding: 4px 6px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #222;
+	border-radius: 15px;
+}
+.aboutSkills .skill .progress_bar .progress_line{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-clr);
+	box-shadow: -1px -1px 2px #7b0707,
+	             1px 1px 2px #111;
+	border-radius: 15px;
+}
+.aboutSkills .skill .progress_bar .progress_line::after{
+	position: absolute;
+	content: attr(value);
+	top: -35px;
+	right: 0;
+	transform: translateX(-50%);
+	color: var(--secondary-heading-clr);
+	font-size: var(--text-fontSize);
+}
