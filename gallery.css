@@ -58,6 +58,9 @@
 	cursor: pointer;
 	transition: color 0.4s;
 }
+.portfolioContents .portfolioBtns ul li a{
+	color: #fff;
+}
 .portfolioContents .portfolioBtns ul li:hover{
 	color: var(--primary-clr);
 }
@@ -74,6 +77,47 @@
 	height: 2px;
 	background-color: var(--primary-clr);
 	animation: portfolioAnimOne 0.4s linear;
+}
+.portfolioBtns ul li a:hover{
+    text-decoration: none;
+    border-radius: 8px;
+    animation-name: nav-hover;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes portfolioBtns {
+    0%{
+        border-bottom: 1px solid white;
+    }
+    12.5%{
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+    }
+    25%{
+        border-right: 1px solid white;
+    }
+    37.5%{
+        border-right: 1px solid white;
+        border-top: 1px solid white;
+    }
+    50%{
+        border-top: 1px solid white;
+    }
+    62.5%{
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+    }
+    75%{
+        border-left: 1px solid white;
+    }
+    87.5%{
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    100%{
+        border-bottom: 1px solid white;
+    }
 }
 @keyframes portfolioAnimOne{
 	0%{
