@@ -180,3 +180,17 @@ hr{
     animation-timing-function: ease;
     animation-iteration-count: infinite;
 }
+
+.slideshow-wrapper {
+    position: relative;
+    top: -35px;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    padding: 0 150px 0 150px;
+    justify-content: space-between;
+}
+  
+.slideshow-wrapper img {
+    width: 350px;
+    height: 500px;
+}
