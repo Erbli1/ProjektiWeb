@@ -194,3 +194,7 @@ hr{
     width: 350px;
     height: 500px;
 }
+
+#prevBtn, #nextBtn {
+    color: #fff;
+}
