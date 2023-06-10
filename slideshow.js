@@ -12,6 +12,12 @@ function showSlides() {
       slides[i].style.display = 'none';
     }
   }
+  
+  // Apply transition effect
+  slides.forEach((slide, index) => {
+    slide.style.transition = index >= currentSlideIndex && index < endIndex ? 'opacity 0.5s ease-in-out' : '';
+    slide.style.opacity = index >= currentSlideIndex && index < endIndex ? '1' : '0';
+  });
 }
 
 function showNextSlides() {
