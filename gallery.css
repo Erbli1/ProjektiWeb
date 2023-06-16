@@ -136,7 +136,8 @@
 .portfolioContents .portfolioGallery .card{
 	position: relative;
 	width: 80%;
-	height: 80%;
+	height: auto;
+	border-radius: 10px;
 	cursor: pointer;
 	overflow: hidden;
 }

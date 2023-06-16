@@ -9,6 +9,10 @@
 }
 .aboutContents .aboutInfo{
 	grid-area: aboutInfo;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
     color: white;
 
 }
@@ -72,7 +76,7 @@
 	background-color: var(--primary-clr);
 }
 .aboutContents .aboutInfo h2{
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
 	color: var(--primary-clr);
 	padding: 14px 0px 15px;
@@ -81,7 +85,7 @@
 }
 .aboutContents .aboutInfo p{
 	color: var(--text-clr);
-	font-size: var(--text-fontSize);
+	font-size: 20px;
 	line-height: 1.2;
 	text-align: justify;
 	padding-bottom: 8px;
