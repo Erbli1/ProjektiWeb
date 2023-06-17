@@ -1,205 +1,41 @@
-
-.portfolioSection{
-	width: 100%;
-	padding: 100px 365px 60px 340px;
-	background-color: var(--bg-clr-two);
-}
-.portfolioSection .portfolioTitle{
-    color: #fff;
-	max-width: 700px;
-	margin: 0px auto;
-	text-align: center;
-}
-.portfolioSection .portfolioTitle h1{
-	position: relative;
-	display: inline-block;
-	font-size: var(--large-heading);
-	color: var(--primary-heading-clr);
-	text-transform: uppercase;
-	margin-bottom: 30px;
-}
-.portfolioSection .portfolioTitle h1::before{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 1px;
-	top: 120%;
-	left: 0;
-	background-color: var(--secondary-heading-clr);
-}
-.portfolioSection .portfolioTitle h1::after{
-	content: '';
-	position: absolute;
-	width: 40%;
-	height: 3px;
-	top: calc(120% - 1px);
-	left: 0;
-	background-color: var(--primary-clr);
-}
-.portfolioContents .portfolioBtns{
-    color: #fff;
-	padding: 20px 0px 25px;
-}
-.portfolioContents .portfolioBtns ul{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	list-style: none;
-}
-.portfolioContents .portfolioBtns ul li{
-	display: inline-block;
-	padding: 3px 0px;
-	font-size: 18px;
-	font-weight: 500;
-	color: var(--secondary-heading-clr);
-	letter-spacing: 1px;
-	margin: 4px 15px;
+.filter-button{
+	color: white;
+	font-size: 25px;
+	height: 50px;
+	width: 300px;
+	border-radius: 10px;
 	cursor: pointer;
-	transition: color 0.4s;
 }
-.portfolioContents .portfolioBtns ul li a{
-	color: #fff;
+
+.filter-buttons{
+	width: 1300px;
+	display: flex;
+	justify-content: space-around;
+	padding: 100px 0;
 }
-.portfolioContents .portfolioBtns ul li:hover{
-	color: var(--primary-clr);
+
+.body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.portfolioContents .portfolioBtns ul li.active{
-	position: relative;
-	color: var(--primary-clr);
-}
-.portfolioContents .portfolioBtns ul li.active::after{
-	content: '';
-	position: absolute;
-	top: 110%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: var(--primary-clr);
-	animation: portfolioAnimOne 0.4s linear;
-}
-.portfolioBtns ul li a:hover{
-    text-decoration: none;
-    border-radius: 8px;
-    animation-name: nav-hover;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-}
-@keyframes portfolioBtns {
-    0%{
-        border-bottom: 1px solid white;
-    }
-    12.5%{
-        border-bottom: 1px solid white;
-        border-right: 1px solid white;
-    }
-    25%{
-        border-right: 1px solid white;
-    }
-    37.5%{
-        border-right: 1px solid white;
-        border-top: 1px solid white;
-    }
-    50%{
-        border-top: 1px solid white;
-    }
-    62.5%{
-        border-top: 1px solid white;
-        border-left: 1px solid white;
-    }
-    75%{
-        border-left: 1px solid white;
-    }
-    87.5%{
-        border-left: 1px solid white;
-        border-bottom: 1px solid white;
-    }
-    100%{
-        border-bottom: 1px solid white;
-    }
-}
-@keyframes portfolioAnimOne{
-	0%{
-		transform: scale(0);
-	}
-	100%{
-		transform: scale(1);
-	}
-}
-.portfolioContents .portfolioGallery{
-	width: 100%;
+
+.gallery {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 10px;
-}
-.portfolioContents .portfolioGallery .card{
-	position: relative;
-	width: 80%;
-	height: auto;
+  }
+  
+  .image {
+	width: 450px;
+	height: 600px;
+	object-fit: cover;
+	cursor: pointer;
 	border-radius: 10px;
-	cursor: pointer;
-	overflow: hidden;
-}
-.portfolioContents .portfolioGallery .card.active{
-	display: block;
-	animation: portfolioAnimTwo 0.3s linear;
-}
-@keyframes portfolioAnimTwo{
-	0%{
-		transform: scale(0.6);
-	}
-	100%{
-		transform: scale(1);
-	}
-}
-.portfolioContents .portfolioGallery .card.hide{
-	display: none;
-}
-.portfolioGallery .card .imgBox{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.portfolioGallery .card .imgBox img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-	cursor: pointer;
-	transition: transform 0.3s linear;
-}
-.portfolioGallery .card:hover .imgBox img{
-	transform: scale(1.1);
-}
+  }
 
-.portfolioPopupBox{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.90);
-	z-index: 300;
-	display: none;
-}
-.portfolioPopupBox span{
-	position: absolute;
-	display: inline-block;
-	color: var(--primary-heading-clr);
-	font-size: 50px;
-	font-weight: 900;
-	top: 0;
-	right: 20px;
+  .image:hover{
+	object-fit: contain;
 	cursor: pointer;
-}
-.portfolioPopupBox img{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 740px;
-	object-fit: cover;
-	display: block;
-	padding: 0px 15px;
-}
+	border-radius: 10px;
+  }
