@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="icons.css">
     <title>Gallery</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="header-container">
             <div class="header-logo">
                 <img src="" alt="" id="logo">
@@ -26,7 +28,7 @@
         </div>
     </header>
 
-	<div class="body">
+	<main class="body">
 		<div class="filter-buttons">
 			<button class="filter-button" data-category="all">All</button>
 			<button class="filter-button" data-category="photoshoot">Photoshoot</button>
@@ -55,8 +57,20 @@
           
         <script src="galleryModals.js"></script>
 		<script src="galleryfilter.js"></script>
-	</div>
-
-
+	</main>
+    <footer class="footer">
+		<div class="left-side-footer">
+		  <img src="uploads/LQ-Logo.jpeg" alt="">
+		  <h1>LiridonQorraj <br> Photography</h1>
+		</div>
+		<div class="right-side-footer">
+		  <ul>
+			<li class="icons-footer bounce"><i class="fab fa-facebook-f bounce icon"></i><a href="https://www.facebook.com/Liridon.qorrajphotos?mibextid=LQQJ4d">LiridonQorrajPhotography</a></li>
+			<li class="icons-footer bounce"><i class="fab fa-instagram bounce icon"></i><a href="https://instagram.com/liridon.qorrajphotos?igshid=Y2I2MzMwZWM3ZA==">liridon.qorrajphotos</a></li>
+			<li class="icons-footer bounce"><i class="fab fa-tiktok bounce icon"></i><a href="https://www.tiktok.com/@liridonqorraj?_t=8dReopt03pG&_r=1">@liridonqorraj</a></li>
+			<li class="icons-footer bounce"><i class="fab fa-snapchat-ghost bounce icon"></i><a href="https://t.snapchat.com/GkZvjrh5">@liridonqorrajj</a></li>
+		  </ul>
+		</div>
+	</footer>
 </body>
 </html>
