@@ -258,6 +258,13 @@ hr{
     grid-gap: 20px;
 }
 
+.right-side-footer ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .icons-footer a{
     color: white;
 }
