@@ -145,9 +145,23 @@ a{
     margin: 100px 0px;
 }
 
-hr{
-    width: 100%;
-}
+.animated-hr {
+    width: 0;
+    border: none;
+    border-top: 1px solid white;
+    animation: hrAnimation 3s forwards;
+  }
+  
+  @keyframes hrAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+  }
+  
+  
 
 .below-hr-galeria{
     display: flex;
