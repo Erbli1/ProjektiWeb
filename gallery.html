@@ -29,33 +29,103 @@
     </header>
 
 	<main class="body">
+
 		<div class="filter-buttons">
 			<button class="filter-button" data-category="all">All</button>
 			<button class="filter-button" data-category="photoshoot">Photoshoot</button>
 			<button class="filter-button" data-category="advertisement">Advertisement</button>
 			<button class="filter-button" data-category="wedding">Weddings</button>
 		</div>
-
-		<div class="gallery">
-			<img src="/uploads/Bleona/IMGL8979.jpg" class="image photoshoot" onclick="openModal('Bleona')">
-			<img src="/uploads/Martini/IMGL4519.jpg" class="image advertisement" onclick="openModal('Martini')">
-			<img src="/uploads/Qifti 1/IMGL0314.jpg" class="image wedding">
-			<img src="/uploads/Butrint Imeri/IMGL8001.jpg" class="image photoshoot">
-			<img src="/uploads/Marketi/CanonCamera2.jpeg" class="image advertisement">
-			<img src="/uploads/Qifti 2/IMGL6848.jpg" class="image wedding">
-			<img src="/uploads/Erika/IMGL2834.jpg" class="image photoshoot">
-			<img src="/uploads/Martini/IMGL4541.jpg" class="image advertisement">
-			<img src="/uploads/Qifti 6/IMGL5142.jpg" class="image wedding">
+	
+		<div id="gallery"></div>
+	
+		<div class="lightbox">
+			<div class="lightbox-content"></div>
+			<span class="close-button">&times;</span>
 		</div>
-
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-              <div id="modalGallery" class="modal-gallery"></div>
-            </div>
-        </div>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.10/pixi.min.js"></script>
+		<script>
+			// Create a PixiJS Application
+			const app = new PIXI.Application();
+	
+			// Get the gallery container element
+			const galleryContainer = document.getElementById('gallery');
+	
+			// Add the PixiJS canvas to the gallery container
+			galleryContainer.appendChild(app.view);
+	
+			// Create an array of image URLs
+			const imageUrls = [
+				{ url: '/uploads/Bleona/IMGL8979.jpg', category: 'photoshoot' },
+				{ url: '/uploads/Martini/IMGL4519.jpg', category: 'advertisement' },
+				{ url: '/uploads/Qifti 1/IMGL0314.jpg', category: 'wedding' },
+				{ url: '/uploads/Butrint Imeri/IMGL8001.jpg', category: 'photoshoot' },
+				{ url: '/uploads/Marketi/CanonCamera2.jpeg', category: 'advertisement' },
+				{ url: '/uploads/Qifti 2/IMGL6848.jpg', category: 'wedding' },
+				{ url: '/uploads/Erika/IMGL2834.jpg', category: 'photoshoot' },
+				{ url: '/uploads/Martini/IMGL4541.jpg', category: 'advertisement' },
+				{ url: '/uploads/Qifti 6/IMGL5142.jpg', category: 'wedding' },
+			];
+	
+			// Create an array to store PIXI.Sprite objects
+			const sprites = [];
+	
+			// Create an array to store thumbnails
+			const thumbnails = [];
+	
+			// Load the images and create PIXI.Sprite objects
+			PIXI.Loader.shared.add(imageUrls.map((item) => item.url)).load(() => {
+				imageUrls.forEach((item) => {
+					const texture = PIXI.Texture.from(item.url);
+					const sprite = new PIXI.Sprite(texture);
+					sprite.interactive = true;
+					sprite.on('click', () => showLightbox(item.url));
+					sprites.push(sprite);
+					app.stage.addChild(sprite);
+	
+					const thumbnail = document.createElement('img');
+					thumbnail.src = item.url;
+					thumbnail.classList.add('thumbnail');
+					thumbnail.dataset.category = item.category;
+					thumbnail.addEventListener('click', () => showLightbox(item.url));
+					thumbnails.push(thumbnail);
+					galleryContainer.appendChild(thumbnail);
+				});
+			});
+	
+			// Show the lightbox with the selected image
+			function showLightbox(imageSrc) {
+				// Clear previous content
+				const lightboxContent = document.querySelector('.lightbox-content');
+				lightboxContent.innerHTML = '';
+	
+				// Create the lightbox image
+				const texture = PIXI.Texture.from(imageSrc);
+				const lightboxImage = new PIXI.Sprite(texture);
+				lightboxImage.anchor.set(0.5);
+				lightboxImage.position.set(app.screen.width / 2, app.screen.height / 2);
+				lightboxImage.scale.set(0.5);
+	
+				// Append the image to the lightbox content
+				lightboxContent.appendChild(lightboxImage);
+	
+				// Show the lightbox
+				const lightbox = document.querySelector('.lightbox');
+				lightbox.style.display = 'block';
+			}
+	
+			// Close the lightbox
+			function closeLightbox() {
+				const lightbox = document.querySelector('.lightbox');
+				lightbox.style.display = 'none';
+			}
+	
+			// Add event listener to close button
+			const closeButton = document.querySelector('.close-button');
+			closeButton.addEventListener('click', closeLightbox);
+		</script>
           
-        <script src="galleryModals.js"></script>
 		<script src="galleryfilter.js"></script>
 	</main>
     <footer class="footer">
