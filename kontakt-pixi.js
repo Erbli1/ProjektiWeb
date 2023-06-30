@@ -23,9 +23,9 @@ maximizePhoto(); // Example: Maximize the photo initially
 
 // Listen to key presses to trigger actions
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'm') {
+  if (event.key === '-') {
     minimizePhoto();
-  } else if (event.key === 'x') {
+  } else if (event.key === '+') {
     maximizePhoto();
   }
 });
