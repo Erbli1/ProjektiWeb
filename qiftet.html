@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="" alt="" id="logo">
+                <h1>LiridonQorraj <br> Photography</h1>
+            </div>
+            <div class="header-nav">
+                <ul>
+                    <li><a href="index.html">Liridon Qorraj Studio</a></li>
+                    <li><a href="postimet.html">Postimet</a></li>
+                    <li><a href="kontakti.html">Kontakti</a></li>
+                    <li><a href="rrethmeje.html">Rreth Meje</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+	<section class="portfolioSection" id="sectionPortfolio">
+
+		<header class="portfolioTitle">
+			<h1>Qiftet</h1>
+		</header>
+        <main class="body">
+            <div class="filter-buttons">
+                <button class="filter-button" data-category="all">Qiftet</button>
+            </div>
+			
+            <div class="gallery">
+                <img src="/uploads/Qifti 1/IMGL0028.jpg" class="image wedding" >
+                <img src="/uploads/Qifti 10/IMGL9205.jpg" class="image wedding" >
+                <img src="/uploads/Qifti 3/IMGL0778.jpg" class="image wedding" >
+                <img src="/uploads/Qifti 4/IMG_8245.jpg" class="image wedding" >
+                <img src="/uploads/Qifti 3/IMGL0999.jpg" class="image wedding" >
+                <img src="/uploads/Qifti 5/IMGL1628.jpg" class="image wedding" >
+            </div>
+    
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                  <div id="modalGallery" class="modal-gallery"></div>
+                </div>
+            </div>
+              
+            <script src="galleryModals.js"></script>
+            <script src="galleryfilter.js"></script>
+        </main>
+        <footer class="footer">
+            <div class="left-side-footer">
+              <img src="uploads/LQ-Logo.jpeg" alt="">
+              <h1>LiridonQorraj <br> Photography</h1>
+            </div>
+            <div class="right-side-footer">
+              <ul>
+                <li class="icons-footer bounce"><i class="fab fa-facebook-f bounce icon"></i><a href="https://www.facebook.com/Liridon.qorrajphotos?mibextid=LQQJ4d">LiridonQorrajPhotography</a></li>
+                <li class="icons-footer bounce"><i class="fab fa-instagram bounce icon"></i><a href="https://instagram.com/liridon.qorrajphotos?igshid=Y2I2MzMwZWM3ZA==">liridon.qorrajphotos</a></li>
+                <li class="icons-footer bounce"><i class="fab fa-tiktok bounce icon"></i><a href="https://www.tiktok.com/@liridonqorraj?_t=8dReopt03pG&_r=1">@liridonqorraj</a></li>
+                <li class="icons-footer bounce"><i class="fab fa-snapchat-ghost bounce icon"></i><a href="https://t.snapchat.com/GkZvjrh5">@liridonqorrajj</a></li>
+              </ul>
+            </div>
+        </footer>
+
+		</main>
+
+	</section>
+</body>
+</html>
